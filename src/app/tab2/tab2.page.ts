@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 
-const apiUrl = '/api';
+const apiUrl = 'http://dev.aymericmayeur.com/duckbook-api/getLivres.php';
 
 @Component({
   selector: 'app-tab2',
@@ -16,14 +16,16 @@ export class Tab2Page implements OnInit {
 
   ngOnInit() {
     this.http
-        .post(`${apiUrl}`,
+        .get(`${apiUrl}`,
             {
-                action: 'getLivres'
+                params: {
+                    action: 'getLivres'
+                },
+                observe: 'response'
             })
         .subscribe(data => {
           // On affecte le résultats à notre variable livre
-            console.log(data);
-          // this.livres = data['body']['results'];
+            this.livres = data.body['results'];
         }, (error) => {
           console.log(error);
         });
