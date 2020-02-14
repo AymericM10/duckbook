@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "https://dev.aymericmayeur.com/duckbook-api/getLivres.php",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

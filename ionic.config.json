@@ -1,0 +1,13 @@
+{
+  "name": "duckbook",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "https://dev.aymericmayeur.com/duckbook-api"
+    }
+  ]
+}
