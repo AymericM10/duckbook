@@ -8,8 +8,9 @@
 
 <ion-content>
 
-  <ion-card *ngFor="let livre of livres">
-    {{ livre.livre_titre }}
+  <ion-card *ngFor="let livre of livres" class="livre">
+    <h4>{{ livre.livre_titre }}</h4>
+    <p>{{ livre.livre_desc }}</p>
   </ion-card>
 
 </ion-content>
